@@ -48,9 +48,12 @@ while durchlauf == 0:
             pi.set_PWM_dutycycle(WHITE, w)
             time.sleep(0.5)
 
-        print ("erste SChleife") 
+        print ("erste Schleife") 
 
-        #if r == 110 and g == 33 and b == 11 and w == 0:
+        print (r)
+        print (g)
+        print (b)
+        print (w)
 
         while r <= 173 and g <= 54 and b <= 11 and w <= 0:
             
@@ -69,7 +72,10 @@ while durchlauf == 0:
 
         print ("zweite Schleife")
 
-        #if r == 173 and g == 54 and b == 11 and w == 0:
+        print (r)
+        print (g)
+        print (b)
+        print (w)
 
         while r <= 215 and g <= 114 and b <= 11 and w <= 0:
 
@@ -87,8 +93,11 @@ while durchlauf == 0:
             time.sleep(0.5)  
 
         print ("dritte Schleife")
-
-        #if r == 215 and g == 114 and b == 11 and w == 0:
+        
+        print (r)
+        print (g)
+        print (b)
+        print (w)
 
         while r <= 255 and g <= 194 and b <= 91 and w <= 0:
 
@@ -107,7 +116,10 @@ while durchlauf == 0:
 
         print ("vierte Schleife")
 
-        #if r == 255 and g == 194 and b == 91 and w == 0:
+        print (r)
+        print (g)
+        print (b)
+        print (w)
 
         while r <= 255 and g <= 226.5 and b <= 156 and w <= 0:
 
@@ -126,7 +138,10 @@ while durchlauf == 0:
 
         print ("fünfte Schleife")
 
-        #if r == 255 and g == 226.5 and b == 156 and w == 0:
+        print (r)
+        print (g)
+        print (b)
+        print (w)
 
         while r <= 255 and g <= 255 and b <= 255 and w <= 255:
         
@@ -143,9 +158,14 @@ while durchlauf == 0:
             pi.set_PWM_dutycycle(BLUE, b)
             pi.set_PWM_dutycycle(WHITE, w)
             time.sleep(0.5)
-
             
-
         print ("sechste Schleife")
 
-    durchlauf + 1
+        print (r)
+        print (g)
+        print (b)
+        print (w)
+
+        durchlauf = durchlauf + 1
+        print ("Jetzt ist Tag")
+
