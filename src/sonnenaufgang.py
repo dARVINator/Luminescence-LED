@@ -128,7 +128,7 @@ while durchlauf == 0:
 
         #if r == 255 and g == 226.5 and b == 156 and w == 0:
 
-        while r <= 255 and g <= 255 and b <= 255 and w == 255:
+        while r <= 255 and g <= 255 and b <= 255 and w <= 255:
         
         #sechste Schleife
 
