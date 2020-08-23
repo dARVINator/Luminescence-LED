@@ -1,7 +1,7 @@
 import datetime
 import threading
-import sunrise_test
-import sunset_test
+import sunrise
+import sunset
 
 
 def get_time_as_num():
@@ -11,10 +11,10 @@ def get_time_as_num():
     #Die Funktion int konventiert den string in einen integer
     return int(time)
 
-def main():
+def timer():
     #Hier ist die festgelegte Zeit angeben
-    start = 1759
-    end = 1805
+    start = 700
+    end = 2000
 
     timer = threading.Event()
 
@@ -25,17 +25,25 @@ def main():
         time = get_time_as_num()
         #Hier wird der Sonnenaufgang angefangen falls alles zutrifft.
         if time >= start and startanf > endanf:
-            sunrise_test.aufgang()
+            sunrise.exe_sunrise()
             endanf = endanf + 1
+            if time >= start and time <= end:
+                while get_time_as_num() < end:
+                    timer.wait(30.00)
+                    #Hier können später noch Funktionen hinzugefügt werden wie Gewitter, Wolken etc.g
         
         #Hier wird der Sonnenuntergang angefangen falls alles zutrifft.
         elif time >= end and startanf == endanf:
-            sunset_test.untergang()
+            sunset.exe_sunset()
             endanf = 0
             startanf = 1
+            if time >= end and time >= start: #or time <= end and time <= start
+                while get_time_as_num() > end and get_time_as_num() > start or get_time_as_num() < start:
+                    timer.wait(30.00)
+                    #Hier können später noch Funktionen hinzugefügt werden wie Mondphasen etc.
 
-        timer.wait(4.0)
+        timer.wait(59.00)#Zahl muss noch geändert werden 
 
 
 if __name__ == '__main__':
-    main()
+    timer()

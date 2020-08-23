@@ -8,7 +8,7 @@ import time
 
 pigpio.exceptions = False
 
-def sunset():
+def exe_sunset():
     #Hier werden die GPIO Pins als Variable deklariert.
     #Das ist einfacher und übersichtlicher.
 
@@ -48,7 +48,7 @@ def sunset():
             pi.set_PWM_dutycycle(GREEN, g)
             pi.set_PWM_dutycycle(BLUE, b)
             pi.set_PWM_dutycycle(WHITE, w)
-            time.sleep(0.25)
+            time.sleep(8)
 
             ticks1 = ticks1 + 1
 
@@ -74,7 +74,7 @@ def sunset():
             pi.set_PWM_dutycycle(GREEN, g)
             pi.set_PWM_dutycycle(BLUE, b)
             pi.set_PWM_dutycycle(WHITE, w)
-            time.sleep(0.25)
+            time.sleep(8)
 
             ticks2 = ticks2 + 1
 
@@ -100,7 +100,7 @@ def sunset():
             pi.set_PWM_dutycycle(GREEN, g)
             pi.set_PWM_dutycycle(BLUE, b)
             pi.set_PWM_dutycycle(WHITE, w)
-            time.sleep(0.25)
+            time.sleep(8)
 
             ticks3 = ticks3 + 1
 
@@ -126,7 +126,7 @@ def sunset():
             pi.set_PWM_dutycycle(GREEN, g)
             pi.set_PWM_dutycycle(BLUE, b)
             pi.set_PWM_dutycycle(WHITE, w)
-            time.sleep(0.25)
+            time.sleep(8)
 
             ticks4 = ticks4 + 1            
 
@@ -139,4 +139,3 @@ def sunset():
         
         durchlauf = +1
         print ("Jetzt ist Nacht")
-sunset()
